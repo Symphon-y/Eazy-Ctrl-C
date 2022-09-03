@@ -6,9 +6,12 @@
     "storage",
     "tabs",
     "activeTab",
-    "http://*/*",
-    "https://*/*"
+    "scripting"
   ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "action": {
     "default_popup": "index.html"
   },
