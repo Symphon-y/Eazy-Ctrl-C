@@ -4,6 +4,13 @@
   width: 200px; */
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,4 +44,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
 }
