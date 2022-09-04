@@ -16,9 +16,10 @@ const Copy = () => {
     return keys.map((item) => {
       return (
         <span className='button_container'>
-          <ButtonGroup variant='contained' aria-label='split button'>
+          <ButtonGroup variant='outlined' aria-label='split button'>
             <Button
-              variant='contained'
+              variant='outlined'
+              sx={{ color: '#234650', borderColor: '#234650' }}
               onClick={() => {
                 navigator.clipboard.writeText(localStorage.getItem(item));
               }}>
@@ -26,7 +27,8 @@ const Copy = () => {
             </Button>
             <Button
               size='small'
-              variant='contained'
+              variant='outlined'
+              sx={{ color: '#234650', borderColor: '#234650' }}
               onClick={(e) => {
                 removeFromStorage(e, item);
               }}>
@@ -37,7 +39,13 @@ const Copy = () => {
       );
     });
   };
-  return <div className='list_container'>{storageItems()}</div>;
+  return (
+    <div className='list_container'>
+      <h3 className='list_header'>List</h3>
+      <hr className='divider'></hr>
+      {storageItems()}
+    </div>
+  );
 };
 
 export default Copy;

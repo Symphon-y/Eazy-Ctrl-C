@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 600px;
   width: 300px;
-  background-color: rgb(29,29,29);
+  overflow: scroll;
+  background-color: #141e24;
+  border: 2px solid white;
 }
 
 code {
