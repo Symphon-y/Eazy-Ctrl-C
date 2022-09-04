@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Box } from '@mui/material';
+import { Button, Box, ButtonGroup } from '@mui/material';
+import '../App.css';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Copy = () => {
   const [keys, setKeys] = useState(Object.keys(localStorage).sort());
@@ -13,26 +15,29 @@ const Copy = () => {
   const storageItems = () => {
     return keys.map((item) => {
       return (
-        <Box component='span' sx={{ p: 2 }}>
-          <Button
-            variant='contained'
-            onClick={() => {
-              navigator.clipboard.writeText(localStorage.getItem(item));
-            }}>
-            {item}
-          </Button>
-          <Button
-            variant='contained'
-            onClick={(e) => {
-              removeFromStorage(e, item);
-            }}>
-            Delete
-          </Button>
-        </Box>
+        <span className='button_container'>
+          <ButtonGroup variant='contained' aria-label='split button'>
+            <Button
+              variant='contained'
+              onClick={() => {
+                navigator.clipboard.writeText(localStorage.getItem(item));
+              }}>
+              {item}
+            </Button>
+            <Button
+              size='small'
+              variant='contained'
+              onClick={(e) => {
+                removeFromStorage(e, item);
+              }}>
+              <CloseIcon />
+            </Button>
+          </ButtonGroup>
+        </span>
       );
     });
   };
-  return <div>{storageItems()}</div>;
+  return <div className='list_container'>{storageItems()}</div>;
 };
 
 export default Copy;
