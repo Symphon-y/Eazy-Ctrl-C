@@ -54,10 +54,23 @@
   color: #234650
 }
 
+.donate_btn {
+  text-decoration: none;
+  color: #141e24
+}
+
 .divider {
   border-style: solid;
   border-color: #234650;
   border-width: .75px;
   width: 95%;
   margin-bottom: 3%;
+}
+
+.form_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  overflow: scroll;
 }

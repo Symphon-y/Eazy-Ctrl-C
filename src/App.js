@@ -35,11 +35,11 @@ function App() {
         {page === 'Copy' ? <Copy /> : <Form />}
         <span className='footer_container'>
           <Button
-            variant='outlined'
-            sx={{ color: '#234650', borderColor: '#234650' }}>
+            variant='contained'
+            sx={{ backgroundColor: '#234650', borderColor: '#234650' }}>
             <a
               href='https://www.buymeacoffee.com/RhysCreates'
-              className='footer_btn'
+              className='donate_btn'
               target='_blank'
               rel='noopener noreferrer'>
               Donate
@@ -47,7 +47,7 @@ function App() {
           </Button>
           <Button
             variant='outlined'
-            sx={{ color: '#234650', borderColor: '#234650' }}>
+            sx={{ color: '#234650', borderColor: '#234650', mr: 1, ml: 1}}>
             <a
               href='https://twitter.com/Travis_Redden'
               className='footer_btn'

@@ -1,6 +1,6 @@
 {
    "manifest_version": 3,
-   "name": "EzApply",
+   "name": "Ez Ctrl-C",
    "version": "0.01",
    "permissions": [
     "storage",

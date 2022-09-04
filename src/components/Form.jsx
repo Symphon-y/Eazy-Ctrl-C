@@ -18,7 +18,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className='form_container'>
       <Box
         component='form'
         sx={{
@@ -30,6 +30,7 @@ const Form = () => {
           id='standard-basic'
           label='Label'
           variant='standard'
+          sx={{ color: '#234650', borderColor: '#234650' }}
           onChange={(e) => {
             handleChange(setLabel, e);
           }}
@@ -38,13 +39,17 @@ const Form = () => {
           id='outlined-basic'
           label='Text Content'
           variant='outlined'
+          sx={{ color: 'red', borderColor: 'red' }}
           onChange={(e) => {
             handleChange(setContent, e);
           }}
         />
       </Box>
       <div className='submit'>
-        <Button variant='contained' onClick={setLocalStorage}>
+        <Button
+          variant='contained'
+          sx={{ backgroundColor: '#234650', borderColor: '#234650' }}
+          onClick={setLocalStorage}>
           Submit
         </Button>
       </div>
