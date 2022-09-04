@@ -52,3 +52,9 @@
   justify-content: center;
   margin-top: 15px;
 }
+
+.Header{
+  padding: 10px;
+  background-color: coral;
+  margin: 0px;
+}

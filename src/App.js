@@ -24,6 +24,7 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className='App'>
+        <h1 className='Header'>Ez Copy</h1>
         <Stack className='nav' spacing={2} direction='row'>
           <Button variant='outlined' onClick={changePage}>
             Copy
