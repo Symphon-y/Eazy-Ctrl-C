@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+//import Header from '../Assets/headerLogo.png'
 
 //import styled from '@emotion/styled';
 const darkTheme = createTheme({
@@ -24,13 +25,10 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className='App'>
-        <h1 className='Header'>Ez Copy</h1>
+        <img className='Header' src='../Assets/headerLogo2.png' alt='header' />
         <Stack className='nav' spacing={2} direction='row'>
           <Button variant='outlined' onClick={changePage}>
-            Copy
-          </Button>
-          <Button variant='outlined' onClick={changePage}>
-            New Entry
+            {page === 'Copy' ? 'New Entry' : 'Home'}
           </Button>
         </Stack>
         {page === 'Copy' ? <Copy /> : <Form />}
